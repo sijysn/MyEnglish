@@ -6,13 +6,13 @@ MyEnglish　<br>
 
 オリジナルのクイズが作れる英単語学習アプリ
 
-▼ Demoはこちらです
+<!-- ▼ Demoはこちらです
 
 
 
 Email: @email.com  
   
-Password： 
+Password：  -->
 
 　
 
