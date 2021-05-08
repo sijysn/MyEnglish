@@ -32,7 +32,7 @@ function Header() {
       right="0"
       left="0"
       p={2}
-      boxShadow="0 1px 1px 0 rgba(26, 80, 139, 0.3)"
+      borderBottom="solid 1px rgba(26, 80, 139, 0.3)"
     >
       <Container maxWidth="md">
         <Box position="relative">
