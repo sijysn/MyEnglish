@@ -38,9 +38,9 @@ function QuizResults({
   };
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    }
+    if (!userInfo) history.push("/login");
+
+    console.log(quizList);
   }, [history, userInfo]);
 
   return (
@@ -66,11 +66,21 @@ function QuizResults({
         </Typography>
 
         <Box pt={10} mt={5} maxHeight="50vh" style={{ overflowY: "scroll" }}>
+          {wrongQuizList.length > 0 && (
+            <QuizResultListItem
+              index="#"
+              word="単語"
+              meaning="意味"
+              mistake="間違えた回数"
+            />
+          )}
+
           {wrongQuizList.map((questionCount, index) => (
             <QuizResultListItem
               index={index + 1}
               word={quizList[questionCount].word}
               meaning={quizList[questionCount].meaning}
+              mistake={quizList[questionCount].mistake}
               key={quizList[questionCount].id}
             />
           ))}
