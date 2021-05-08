@@ -6,13 +6,14 @@ MyEnglish　<br>
 
 オリジナルのクイズが作れる英単語学習アプリ
 
-<!-- ▼ Demoはこちらです
+▼ Demoはこちらです
+
+https://myenglish3084.herokuapp.com/#/
 
 
-
-Email: @email.com  
+Email: Guest@email.com  
   
-Password：  -->
+Password： Guest
 
 　
 
