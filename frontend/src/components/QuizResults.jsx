@@ -39,8 +39,6 @@ function QuizResults({
 
   useEffect(() => {
     if (!userInfo) history.push("/login");
-
-    console.log(quizList);
   }, [history, userInfo]);
 
   return (
