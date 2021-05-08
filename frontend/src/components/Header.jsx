@@ -39,7 +39,7 @@ function Header() {
           <Box alignItems="center" display="flex">
             <Link to="/">
               <img
-                src="/images/MyEnglish.png"
+                src="https://res.cloudinary.com/dfw3mlaic/image/upload/v1620460832/MyEnglish/MyEnglish_aedvce.png"
                 alt="Icon"
                 className="header__icon"
               />

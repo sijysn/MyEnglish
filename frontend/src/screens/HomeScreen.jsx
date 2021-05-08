@@ -23,7 +23,11 @@ function HomeScreen() {
         style={{ overflowY: "scroll" }}
       >
         <Box pb={10}>
-          <img src="/images/MyEnglish.png" alt="Icon" className="home__icon" />
+          <img
+            src="https://res.cloudinary.com/dfw3mlaic/image/upload/v1620460832/MyEnglish/MyEnglish_aedvce.png"
+            alt="Icon"
+            className="home__icon"
+          />
           <Typography component="h1" variant="h1" gutterBottom>
             <strong>My English</strong>
           </Typography>

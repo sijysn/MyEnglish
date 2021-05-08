@@ -53,7 +53,11 @@ function RegisterScreen() {
         maxHeight="100vh"
         style={{ overflowY: "scroll" }}
       >
-        <img src="/images/MyEnglish.png" alt="Icon" className="login__icon" />
+        <img
+          src="https://res.cloudinary.com/dfw3mlaic/image/upload/v1620460832/MyEnglish/MyEnglish_aedvce.png"
+          alt="Icon"
+          className="login__icon"
+        />
         <Typography component="h1" variant="h2">
           ユーザー登録
         </Typography>
