@@ -34,8 +34,13 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
     },
   };
 
-  const correctSound = new Audio("/audios/correct.mp3");
-  const wrongSound = new Audio("/audios/wrong.mp3");
+  const correctSound = new Audio(
+    "https://res.cloudinary.com/dfw3mlaic/video/upload/v1620492082/MyEnglish/correct_cigmpr.mp3"
+  );
+
+  const wrongSound = new Audio(
+    "https://res.cloudinary.com/dfw3mlaic/video/upload/v1620492100/MyEnglish/wrong_hizze4.mp3"
+  );
 
   const answerWrong = async () => {
     setJudge("wrong");
