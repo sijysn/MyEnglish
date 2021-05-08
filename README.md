@@ -104,7 +104,7 @@ frontend $ npm start
 
 4. URL にアクセスする  
 
-   http://localhost:3000/#/register　<br>
+   http://localhost:3000/#/　<br>
 　
 # Note
 
