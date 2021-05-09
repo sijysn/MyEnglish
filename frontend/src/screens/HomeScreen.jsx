@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
@@ -28,13 +28,16 @@ function HomeScreen() {
             alt="Icon"
             className="home__icon"
           />
+
           <Typography component="h1" variant="h1" gutterBottom>
             <strong>My English</strong>
           </Typography>
+
           <Typography component="h2" variant="h4">
             ”自分だけ”の英単語クイズを作ろう！
           </Typography>
         </Box>
+
         <Box display="flex" justifyContent="center">
           <LinkButton
             to={userInfo ? "/quizzes/folders" : "/login"}

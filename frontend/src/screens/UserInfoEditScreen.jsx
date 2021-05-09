@@ -10,7 +10,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import Alert from "@material-ui/lab/Alert";
 
-import ProfileSettingsHeader from "../components/ProfileSettingsHeader";
+import SettingsHeader from "../components/SettingsHeader";
 
 import { USER_DETAILS_UPDATE_RESET } from "../consts/userConsts";
 import { genderIdentities } from "../consts/genderConsts";
@@ -82,7 +82,7 @@ function UserInfoEditScreen() {
           maxHeight="100vh"
           style={{ overflowY: "scroll" }}
         >
-          <ProfileSettingsHeader to="/profile" title="ユーザー情報設定" />
+          <SettingsHeader to="/profile" title="ユーザー情報設定" />
 
           {loading || updating ? (
             <CircularProgress />

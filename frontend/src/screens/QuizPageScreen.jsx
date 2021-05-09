@@ -6,9 +6,9 @@ import Box from "@material-ui/core/Box";
 import Alert from "@material-ui/lab/Alert";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-import QuizSettings from "../components/QuizSettings";
-import Quizzes from "../components/Quizzes";
-import QuizResults from "../components/QuizResults";
+import QuizSettings from "../components/QuizPageScreen/QuizSettings";
+import Quizzes from "../components/QuizPageScreen/Quizzes";
+import QuizResults from "../components/QuizPageScreen/QuizResults";
 
 import { setFolder } from "../actions/folderActions";
 import { setQuizzes } from "../actions/quizActions";

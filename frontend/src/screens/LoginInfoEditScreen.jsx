@@ -9,7 +9,7 @@ import Container from "@material-ui/core/Container";
 import Alert from "@material-ui/lab/Alert";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-import ProfileSettingsHeader from "../components/ProfileSettingsHeader";
+import SettingsHeader from "../components/SettingsHeader";
 
 import { USER_DETAILS_UPDATE_RESET } from "../consts/userConsts";
 
@@ -64,7 +64,7 @@ function LoginInfoEditScreen() {
           maxHeight="100vh"
           style={{ overflowY: "scroll" }}
         >
-          <ProfileSettingsHeader to="/profile" title="ログイン情報設定" />
+          <SettingsHeader to="/profile" title="ログイン情報設定" />
 
           {loading ? (
             <CircularProgress />

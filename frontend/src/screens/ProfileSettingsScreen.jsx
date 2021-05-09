@@ -7,8 +7,8 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import List from "@material-ui/core/List";
 
-import SettingsListItem from "../components/SettingsListItem";
-import ProfileSettingsHeader from "../components/ProfileSettingsHeader";
+import SettingsListItem from "../components/ProfileSettingsScreen/SettingsListItem";
+import SettingsHeader from "../components/SettingsHeader";
 
 function ProfileSettingsScreen() {
   const history = useHistory();
@@ -30,7 +30,7 @@ function ProfileSettingsScreen() {
           maxHeight="100vh"
           style={{ overflowY: "scroll" }}
         >
-          <ProfileSettingsHeader to="/" title="プロフィール設定" />
+          <SettingsHeader to="/" title="プロフィール設定" />
 
           <Box mt="3rem">
             <List>

@@ -9,7 +9,7 @@ import List from "@material-ui/core/List";
 import Alert from "@material-ui/lab/Alert";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-import QuizFolderListItem from "../components/QuizFolderListItem";
+import QuizFolderListItem from "../components/QuizFolderSelectScreen/QuizFolderListItem";
 import LinkButton from "../components/LinkButton";
 
 import { listFolders } from "../actions/folderActions";

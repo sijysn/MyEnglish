@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import Box from "@material-ui/core/Box";
@@ -9,7 +9,7 @@ import List from "@material-ui/core/List";
 import Alert from "@material-ui/lab/Alert";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-import EditingFolderListItem from "../components/EditingFolderListItem";
+import EditingFolderListItem from "../components/EditingFolderSelectScreen/EditingFolderListItem";
 import LinkButton from "../components/LinkButton";
 
 import { listFolders } from "../actions/folderActions";
@@ -79,6 +79,7 @@ function EditingFolderSelectScreen() {
             </List>
           )
         )}
+
         <Box
           display="flex"
           flexDirection="row"

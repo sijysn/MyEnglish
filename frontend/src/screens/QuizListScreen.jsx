@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Link, useHistory, useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import Box from "@material-ui/core/Box";
@@ -9,7 +9,7 @@ import List from "@material-ui/core/List";
 import Alert from "@material-ui/lab/Alert";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-import QuizListItem from "../components/QuizListItem";
+import QuizListItem from "../components/QuizListScreen/QuizListItem";
 import LinkButton from "../components/LinkButton";
 
 import { setFolder } from "../actions/folderActions";
