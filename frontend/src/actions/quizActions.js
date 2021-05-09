@@ -4,15 +4,12 @@ import {
   ALL_QUIZ_REQUEST,
   ALL_QUIZ_SUCCESS,
   ALL_QUIZ_FAIL,
-  ALL_QUIZ_RESET,
   ACTIVE_QUIZ_SET_REQUEST,
   ACTIVE_QUIZ_SET_SUCCESS,
   ACTIVE_QUIZ_SET_FAIL,
-  ACTIVE_QUIZ_RESET,
   QUIZ_DELETE_REQUEST,
   QUIZ_DELETE_SUCCESS,
   QUIZ_DELETE_FAIL,
-  QUIZ_DELETE_RESET,
 } from "../consts/quizConsts";
 
 export const getAllQuizzes = (folderId = "") => async (dispatch, getState) => {
