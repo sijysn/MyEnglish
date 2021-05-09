@@ -1,27 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
 
-import Logout from "./Logout";
+import HeaderLogo from "./HeaderLogo";
+import HeaderMenu from "./HeaderMenu";
 
 function Header() {
-  const [anchorEl, setAnchorEl] = useState("");
-
-  const clickHandler = (e) => {
-    setAnchorEl(e.currentTarget);
-  };
-
-  const closeHandler = () => {
-    setAnchorEl("");
-  };
-
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
 
@@ -36,24 +24,7 @@ function Header() {
     >
       <Container maxWidth="md">
         <Box position="relative">
-          <Box alignItems="center" display="flex">
-            <Link to="/">
-              <img
-                src="https://res.cloudinary.com/dfw3mlaic/image/upload/v1620460832/MyEnglish/MyEnglish_aedvce.png"
-                alt="Icon"
-                className="header__icon"
-              />
-            </Link>
-            <Link to="/">
-              <Typography
-                component="span"
-                variant="h4"
-                style={{ verticalAlign: "8px" }}
-              >
-                My English
-              </Typography>
-            </Link>
-          </Box>
+          <HeaderLogo />
 
           <Box
             position="absolute"
@@ -62,30 +33,7 @@ function Header() {
             style={{ transform: "translateY(-50%)" }}
           >
             {userInfo ? (
-              <Box>
-                <Button color="inherit" onClick={clickHandler}>
-                  <Typography component="span" variant="h5" color="inherit">
-                    メニュー
-                  </Typography>
-                </Button>
-                <Menu
-                  anchorEl={anchorEl}
-                  keepMounted
-                  open={Boolean(anchorEl)}
-                  onClose={closeHandler}
-                >
-                  <MenuItem onClick={closeHandler}>
-                    <Link to="/profile">
-                      <Typography component="span" variant="h5" color="primary">
-                        プロフィール設定
-                      </Typography>
-                    </Link>
-                  </MenuItem>
-                  <MenuItem onClick={closeHandler}>
-                    <Logout />
-                  </MenuItem>
-                </Menu>
-              </Box>
+              <HeaderMenu />
             ) : (
               <Link to="/login" color="inherit" style={{ padding: "1rem" }}>
                 <Typography component="span" variant="h5" color="inherit">
