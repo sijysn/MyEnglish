@@ -10,7 +10,6 @@ import Typography from "@material-ui/core/Typography";
 
 import QuizOptionButtons from "./QuizOptionButtons";
 import PassButton from "./PassButton";
-import ActionButton from "../ActionButton";
 
 function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
   const history = useHistory();
