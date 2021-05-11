@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
-import QuizResultListItem from "./QuizResultListItem";
+import QuizResultList from "./QuizResultList";
 import LinkButton from "../LinkButton";
 import ActionButton from "../ActionButton";
 
@@ -55,7 +55,7 @@ function QuizResults({
           クイズ結果
         </Typography>
 
-        <Typography component="h1" variant="h3" paragraph>
+        <Typography component="h2" variant="h3" paragraph>
           {folder.name}
         </Typography>
 
@@ -63,25 +63,8 @@ function QuizResults({
           {score} / {questionCount} 問正解！
         </Typography>
 
-        <Box pt={10} mt={5} maxHeight="50vh" style={{ overflowY: "scroll" }}>
-          {wrongQuizList.length > 0 && (
-            <QuizResultListItem
-              index="#"
-              word="単語"
-              meaning="意味"
-              mistake="間違えた回数"
-            />
-          )}
-
-          {wrongQuizList.map((questionCount, index) => (
-            <QuizResultListItem
-              index={index + 1}
-              word={quizList[questionCount].word}
-              meaning={quizList[questionCount].meaning}
-              mistake={quizList[questionCount].mistake}
-              key={quizList[questionCount].id}
-            />
-          ))}
+        <Box mt={5}>
+          <QuizResultList wrongQuizList={wrongQuizList} quizList={quizList} />
         </Box>
 
         <Box
