@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -27,6 +27,15 @@ function QuizSettings({ setIsStarted, questionCount, setQuestionCount }) {
 
   const startQuiz = () => setIsStarted(true);
 
+  const keyDownForStartQuiz = useCallback(
+    (e) => {
+      if (error || e.keyCode !== 13) return;
+
+      setIsStarted(true);
+    },
+    [error, setIsStarted]
+  );
+
   useEffect(() => {
     if (!userInfo) history.push("/login");
   }, [history, userInfo]);
@@ -42,6 +51,12 @@ function QuizSettings({ setIsStarted, questionCount, setQuestionCount }) {
     else setError("");
   }, [questionCount, quizList]);
 
+  useEffect(() => {
+    document.addEventListener("keydown", keyDownForStartQuiz);
+
+    return () => document.removeEventListener("keydown", keyDownForStartQuiz);
+  }, [keyDownForStartQuiz]);
+
   return (
     <Container maxWidth="sm">
       <Box
@@ -55,7 +70,7 @@ function QuizSettings({ setIsStarted, questionCount, setQuestionCount }) {
           クイズ設定
         </Typography>
 
-        <Typography component="div" variant="h4" paragraph>
+        <Typography component="h2" variant="h4" paragraph>
           {folder.name}
         </Typography>
 
