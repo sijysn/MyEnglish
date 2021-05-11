@@ -26,11 +26,8 @@ function QuizFolderSelectScreen() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else if (!folders) {
-      dispatch(listFolders());
-    }
+    if (!userInfo) history.push("/login");
+    else if (!folders) dispatch(listFolders());
   }, [history, userInfo, folders, dispatch]);
 
   return (

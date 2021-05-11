@@ -29,17 +29,12 @@ function EditingFolderSelectScreen() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else if (!folders) {
-      dispatch(listFolders());
-    }
+    if (!userInfo) history.push("/login");
+    else if (!folders) dispatch(listFolders());
   }, [history, userInfo, folders, dispatch]);
 
   useEffect(() => {
-    if (success) {
-      dispatch(listFolders());
-    }
+    if (success) dispatch(listFolders());
   }, [dispatch, success]);
 
   return (

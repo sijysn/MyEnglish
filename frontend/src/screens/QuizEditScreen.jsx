@@ -36,21 +36,25 @@ function QuizEditScreen() {
 
   const updateQuizHandler = async (e) => {
     e.preventDefault();
+
     setLoading(true);
+
     await axios.put(
       "/api/quizzes/update/",
       { word: word, meaning: meaning, quizId: quizId },
       config
     );
+
     dispatch(getAllQuizzes(folderId));
+
     setLoading(false);
+
     history.push(`/editings/folders/${folderId}/quizzes`);
   };
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else {
+    if (!userInfo) history.push("/login");
+    else {
       setLoading(true);
 
       async function fetchQuiz() {

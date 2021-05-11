@@ -35,9 +35,8 @@ function QuizPageScreen() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else {
+    if (!userInfo) history.push("/login");
+    else {
       dispatch(setFolder(id));
       dispatch(setQuizzes(id));
     }

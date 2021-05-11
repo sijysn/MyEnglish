@@ -42,9 +42,7 @@ function FolderCreateScreen() {
   };
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    }
+    if (!userInfo) history.push("/login");
   }, [dispatch, history, userInfo]);
 
   return (

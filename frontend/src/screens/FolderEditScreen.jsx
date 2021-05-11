@@ -51,11 +51,8 @@ function FolderEditScreen() {
   };
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else {
-      dispatch(setFolder(folderId));
-    }
+    if (!userInfo) history.push("/login");
+    else dispatch(setFolder(folderId));
   }, [dispatch, history, userInfo, folderId]);
 
   useEffect(() => {

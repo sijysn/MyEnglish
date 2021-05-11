@@ -28,9 +28,7 @@ function LoginScreen() {
   };
 
   useEffect(() => {
-    if (userInfo) {
-      history.push("/");
-    }
+    if (userInfo) history.push("/");
   }, [history, userInfo]);
 
   return (

@@ -32,20 +32,22 @@ function QuizCreateScreen() {
 
   const createQuizHandler = async (e) => {
     e.preventDefault();
+
     setLoading(true);
+
     await axios.post(
       "/api/quizzes/create/",
       { word: word, meaning: meaning, folderId: folderId },
       config
     );
+
     setLoading(false);
+
     history.push(`/editings/folders/${folderId}/quizzes`);
   };
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    }
+    if (!userInfo) history.push("/login");
   }, [history, userInfo]);
 
   return (

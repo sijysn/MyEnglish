@@ -34,9 +34,8 @@ function QuizListScreen() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!userInfo) {
-      history.push("/login");
-    } else {
+    if (!userInfo) history.push("/login");
+    else {
       dispatch(setFolder(folderId));
       dispatch(getAllQuizzes(folderId));
     }
