@@ -180,21 +180,25 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
             ? ref.current.option2
             : ref.current.option3
         );
+        setTimeout(() => {
+          setJudge("");
+          changeQuestion();
+          changeOptions();
+        }, 1000);
         break;
 
       case 40:
         answerWrong();
+        setTimeout(() => {
+          setJudge("");
+          changeQuestion();
+          changeOptions();
+        }, 1000);
         break;
 
       default:
         break;
     }
-
-    setTimeout(() => {
-      setJudge("");
-      changeQuestion();
-      changeOptions();
-    }, 1000);
   });
 
   useEffect(() => {
@@ -227,7 +231,7 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
     document.addEventListener("keydown", keyDown);
 
     return () => document.removeEventListener("keydown", keyDown);
-  }, [shuffledQuizList, keyDown, ref]);
+  }, [shuffledQuizList, keyDown]);
 
   return (
     <Container maxWidth="md">
