@@ -46,7 +46,9 @@ function QuizPageScreen() {
   return (
     <Box>
       {folderLoading && quizLoading ? (
-        <CircularProgress />
+        <Box textAlign="center" mt={2}>
+          <CircularProgress />
+        </Box>
       ) : folderError ? (
         <Alert severity="error">{folderError}</Alert>
       ) : quizError ? (
