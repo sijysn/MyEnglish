@@ -9,6 +9,7 @@ import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
 import QuizOptionButtons from "./QuizOptionButtons";
+import PassButton from "./PassButton";
 import ActionButton from "../ActionButton";
 
 function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
@@ -20,7 +21,6 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
   const [judge, setJudge] = useState("");
 
   const ref = useRef([]);
-  const pass = useRef(null);
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -283,25 +283,8 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
           )}
         </Box>
 
-        <Box textAlign="center" margin="0 auto">
-          <ActionButton
-            name="Pass"
-            TypographyVariant="h4"
-            color="default"
-            disabled={judge ? true : false}
-            ref={pass}
-            onClick={passQuestion}
-            style={{ padding: "1rem 2rem", width: "14rem" }}
-          />
-
-          <Typography
-            component="span"
-            variant="h5"
-            color={judge ? "textSecondary" : "textPrimary"}
-            style={{ display: "block" }}
-          >
-            ↓
-          </Typography>
+        <Box margin="0 auto">
+          <PassButton judge={judge} passQuestion={passQuestion} />
         </Box>
       </Box>
     </Container>
