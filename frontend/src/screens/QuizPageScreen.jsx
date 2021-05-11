@@ -36,11 +36,11 @@ function QuizPageScreen() {
 
   useEffect(() => {
     if (!userInfo) history.push("/login");
-    else {
+    else if (!isStarted) {
       dispatch(setFolder(id));
       dispatch(setQuizzes(id));
     }
-  }, [history, userInfo, dispatch, id]);
+  }, [history, userInfo, dispatch, id, isStarted]);
 
   return (
     <Box>
