@@ -12,12 +12,10 @@ const QuizOptionButtons = React.forwardRef(
     const option3 = useRef(null);
 
     useEffect(() => {
-      if (!ref) return;
+      if (!ref || !option1 || !option2 || !option3) return;
 
-      ref.current.option1 = option1;
-      ref.current.option2 = option2;
-      ref.current.option3 = option3;
-    }, [ref]);
+      ref.current = { option1, option2, option3 };
+    }, [ref, option1, option2, option3]);
 
     return (
       <Box display="flex" flexDirection="row" justifyContent="center">
