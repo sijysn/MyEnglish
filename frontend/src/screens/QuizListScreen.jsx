@@ -74,9 +74,11 @@ function QuizListScreen() {
                 <Typography component="h1" variant="h4" paragraph>
                   {folder.name}
                 </Typography>
+
                 <Typography component="h1" variant="h4" paragraph>
                   {quizList.length}問
                 </Typography>
+
                 <List
                   style={{
                     maxHeight: "50vh",
@@ -100,6 +102,7 @@ function QuizListScreen() {
             )
           )}
         </Box>
+
         <Box
           display="flex"
           flexDirection="row"
