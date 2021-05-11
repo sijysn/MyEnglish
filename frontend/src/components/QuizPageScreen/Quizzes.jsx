@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -8,6 +8,7 @@ import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
 import Typography from "@material-ui/core/Typography";
 
+import QuizOptionButtons from "./QuizOptionButtons";
 import ActionButton from "../ActionButton";
 
 function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
@@ -17,6 +18,9 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
   const [shuffledQuizList, setShuffledQuizList] = useState();
   const [options, setOptions] = useState();
   const [judge, setJudge] = useState("");
+
+  const ref = useRef([]);
+  const pass = useRef(null);
 
   const userLogin = useSelector((state) => state.userLogin);
   const { userInfo } = userLogin;
@@ -80,7 +84,9 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
   };
 
   const checkAnswer = (e) => {
-    const selectedMeaning = e.target.innerText;
+    const selectedMeaning =
+      e.type === "click" ? e.target.innerText : e.current.innerText;
+
     if (selectedMeaning === quizList[currentQuestionCount].meaning)
       answerCorrectly();
     else answerWrong();
@@ -137,7 +143,9 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
 
   const passQuestion = (e) => {
     e.preventDefault();
+
     answerWrong();
+
     setTimeout(() => {
       setJudge("");
       changeQuestion();
@@ -147,13 +155,48 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
 
   const answerQuestion = (e) => {
     e.preventDefault();
+
     checkAnswer(e);
+
     setTimeout(() => {
       setJudge("");
       changeQuestion();
       changeOptions();
     }, 1000);
   };
+
+  const keyDown = useCallback((e) => {
+    if (judge) return;
+
+    const keyCode = e.keyCode;
+
+    switch (keyCode) {
+      case 37:
+      case 38:
+      case 39:
+        checkAnswer(
+          keyCode === 37
+            ? ref.current.option1
+            : keyCode === 38
+            ? ref.current.option2
+            : ref.current.option3
+        );
+        break;
+
+      case 40:
+        answerWrong();
+        break;
+
+      default:
+        break;
+    }
+
+    setTimeout(() => {
+      setJudge("");
+      changeQuestion();
+      changeOptions();
+    }, 1000);
+  });
 
   useEffect(() => {
     if (!userInfo) history.push("/login");
@@ -177,7 +220,15 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
         ])
       );
     }
-  }, [shuffledQuizList]);
+  }, [shuffledQuizList, currentQuestionCount]);
+
+  useEffect(() => {
+    if (!shuffledQuizList) return;
+
+    document.addEventListener("keydown", keyDown);
+
+    return () => document.removeEventListener("keydown", keyDown);
+  }, [shuffledQuizList, keyDown, ref]);
 
   return (
     <Container maxWidth="md">
@@ -221,34 +272,36 @@ function Quizzes({ setIsFinished, questionCount, setScore, setWrongQuizList }) {
           )}
         </Box>
 
-        <Box display="flex" flexDirection="row" justifyContent="center" my={10}>
-          {options &&
-            options.map((option) => (
-              <ActionButton
-                key={option.id}
-                name={option.meaning}
-                TypographyVariant="h4"
-                color="primary"
-                disabled={judge ? true : false}
-                onClick={answerQuestion}
-                style={{
-                  padding: "1rem 2rem",
-                  margin: "0 2rem",
-                  width: "30%",
-                }}
-              />
-            ))}
+        <Box my={10}>
+          {options && (
+            <QuizOptionButtons
+              options={options}
+              judge={judge}
+              answerQuestion={answerQuestion}
+              ref={ref}
+            />
+          )}
         </Box>
 
-        <Box textAlign="center">
+        <Box textAlign="center" margin="0 auto">
           <ActionButton
             name="Pass"
             TypographyVariant="h4"
             color="default"
             disabled={judge ? true : false}
+            ref={pass}
             onClick={passQuestion}
             style={{ padding: "1rem 2rem", width: "14rem" }}
           />
+
+          <Typography
+            component="span"
+            variant="h5"
+            color={judge ? "textSecondary" : "textPrimary"}
+            style={{ display: "block" }}
+          >
+            ↓
+          </Typography>
         </Box>
       </Box>
     </Container>
