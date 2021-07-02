@@ -100,6 +100,12 @@ function UserInfoEditScreen() {
                   variant="outlined"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
+                  InputLabelProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                 />
 
                 <TextField
@@ -110,6 +116,12 @@ function UserInfoEditScreen() {
                   variant="outlined"
                   value={firstName}
                   onChange={(e) => setFirstName(e.target.value)}
+                  InputLabelProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                 />
 
                 <TextField
@@ -118,15 +130,14 @@ function UserInfoEditScreen() {
                   fullWidth
                   margin="normal"
                   variant="outlined"
+                  value={birthDate}
+                  onChange={(e) => setBirthDate(e.target.value)}
                   InputLabelProps={{
-                    shrink: true,
                     style: { fontSize: "1.5rem" },
                   }}
                   InputProps={{
                     style: { fontSize: "1.5rem" },
                   }}
-                  value={birthDate}
-                  onChange={(e) => setBirthDate(e.target.value)}
                 />
 
                 <Autocomplete
@@ -145,6 +156,12 @@ function UserInfoEditScreen() {
                       label="性別"
                       variant="outlined"
                       margin="normal"
+                      InputLabelProps={{
+                        style: { fontSize: "1.5rem" },
+                      }}
+                      InputProps={{
+                        style: { fontSize: "1.5rem" },
+                      }}
                     />
                   )}
                 />
@@ -156,6 +173,12 @@ function UserInfoEditScreen() {
                   variant="outlined"
                   value={profession}
                   onChange={(e) => setProfession(e.target.value)}
+                  InputLabelProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                 />
 
                 <Button

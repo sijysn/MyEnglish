@@ -71,6 +71,12 @@ function FolderCreateScreen() {
               variant="outlined"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              InputLabelProps={{
+                style: { fontSize: "1.5rem" },
+              }}
+              InputProps={{
+                style: { fontSize: "1.5rem" },
+              }}
             />
 
             <Box mt={10} display="flex" justifyContent="center">

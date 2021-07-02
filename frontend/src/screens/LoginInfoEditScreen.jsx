@@ -82,6 +82,12 @@ function LoginInfoEditScreen() {
                   variant="outlined"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  InputLabelProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                 />
 
                 <TextField
@@ -94,6 +100,12 @@ function LoginInfoEditScreen() {
                   variant="outlined"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  InputLabelProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                 />
 
                 <TextField
@@ -106,6 +118,12 @@ function LoginInfoEditScreen() {
                   variant="outlined"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
+                  InputLabelProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                 />
 
                 {error && <Alert severity="error">{error}</Alert>}

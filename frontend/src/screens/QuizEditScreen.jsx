@@ -95,6 +95,12 @@ function QuizEditScreen() {
               variant="outlined"
               value={word}
               onChange={(e) => setWord(e.target.value)}
+              InputLabelProps={{
+                style: { fontSize: "1.5rem" },
+              }}
+              InputProps={{
+                style: { fontSize: "1.5rem" },
+              }}
             />
 
             <TextField
@@ -105,6 +111,12 @@ function QuizEditScreen() {
               variant="outlined"
               value={meaning}
               onChange={(e) => setMeaning(e.target.value)}
+              InputLabelProps={{
+                style: { fontSize: "1.5rem" },
+              }}
+              InputProps={{
+                style: { fontSize: "1.5rem" },
+              }}
             />
 
             <Box mt={10} display="flex" justifyContent="center">
