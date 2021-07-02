@@ -64,6 +64,12 @@ function LoginScreen() {
             variant="outlined"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            InputLabelProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            InputProps={{
+              style: { fontSize: "1.5rem" },
+            }}
           />
 
           <TextField
@@ -76,6 +82,13 @@ function LoginScreen() {
             variant="outlined"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            InputLabelProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            InputProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            s
           />
 
           <Box mt={3}>
@@ -94,7 +107,7 @@ function LoginScreen() {
           <Box p={3}>
             <Link to="/register">
               <Typography component="span" variant="h6">
-                アカウントがありませんか?{"   "}新規登録
+                アカウントがありませんか? &nbsp; 新規登録
               </Typography>
             </Link>
           </Box>

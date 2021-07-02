@@ -16,7 +16,8 @@ body {
   background-color: #fafaf2 !important;
   color: #1a508b !important;
   font-size: 1.5rem;
-  font-family: "PT Sans", Sans MS, "Kosugi Maru", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans",
+    "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
 }
 
 *,

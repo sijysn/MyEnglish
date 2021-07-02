@@ -78,6 +78,7 @@ function LoginInfoEditScreen() {
                   fullWidth
                   margin="normal"
                   autoFocus
+                  autoComplete="email"
                   variant="outlined"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -89,6 +90,7 @@ function LoginInfoEditScreen() {
                   label="パスワード"
                   fullWidth
                   margin="normal"
+                  autoComplete="new-password"
                   variant="outlined"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -100,6 +102,7 @@ function LoginInfoEditScreen() {
                   label="確認用パスワード"
                   fullWidth
                   margin="normal"
+                  autoComplete="new-password"
                   variant="outlined"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}

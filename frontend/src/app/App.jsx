@@ -22,9 +22,15 @@ import QuizCreateScreen from "../screens/QuizCreateScreen";
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: ['"PT Sans"', "Sans MS", '"Kosugi Maru"', "sans-serif"].join(
-      ","
-    ),
+    fontFamily: [
+      '"Helvetica Neue"',
+      "Helvetica",
+      "Arial",
+      '"Hiragino Sans"',
+      '"Hiragino Kaku Gothic Pro"',
+      "Meiryo",
+      "sans-serif",
+    ].join(","),
   },
 });
 

@@ -76,6 +76,12 @@ function RegisterScreen() {
             variant="outlined"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            InputLabelProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            InputProps={{
+              style: { fontSize: "1.5rem" },
+            }}
           />
 
           <TextField
@@ -86,6 +92,12 @@ function RegisterScreen() {
             variant="outlined"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            InputLabelProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            InputProps={{
+              style: { fontSize: "1.5rem" },
+            }}
           />
 
           <TextField
@@ -98,6 +110,12 @@ function RegisterScreen() {
             variant="outlined"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            InputLabelProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            InputProps={{
+              style: { fontSize: "1.5rem" },
+            }}
           />
 
           <TextField
@@ -110,6 +128,12 @@ function RegisterScreen() {
             variant="outlined"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            InputLabelProps={{
+              style: { fontSize: "1.5rem" },
+            }}
+            InputProps={{
+              style: { fontSize: "1.5rem" },
+            }}
           />
 
           <Box mt={3}>
@@ -128,7 +152,7 @@ function RegisterScreen() {
           <Box p={3}>
             <Link to="/login">
               <Typography component="span" variant="h6">
-                既にアカウントがありますか?{"   "}ログイン
+                既にアカウントがありますか? &nbsp; ログイン
               </Typography>
             </Link>
           </Box>

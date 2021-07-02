@@ -66,9 +66,12 @@ function QuestionCountSelector({
         </Box>
         <TextField
           type="number"
-          label="数字を入れてくださいr"
+          label="数字を入れてください"
           InputLabelProps={{
-            shrink: true,
+            style: { fontSize: "1.5rem" },
+          }}
+          InputProps={{
+            style: { fontSize: "1.5rem" },
           }}
           onChange={(e) =>
             setQuestionCount(Number(hankakuToZenkaku(e.target.value)))

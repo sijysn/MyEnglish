@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useCallback } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -37,9 +37,19 @@ function QuizResults({
     setScore(0);
   };
 
+  const keyDown = useCallback((e) => {
+    if (e.keyCode === 13) retry();
+  }, []);
+
   useEffect(() => {
     if (!userInfo) history.push("/login");
   }, [history, userInfo]);
+
+  useEffect(() => {
+    document.addEventListener("keydown", keyDown);
+
+    return () => document.removeEventListener("keydown", keyDown);
+  }, [keyDown]);
 
   return (
     <Container>

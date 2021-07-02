@@ -118,7 +118,13 @@ function UserInfoEditScreen() {
                   fullWidth
                   margin="normal"
                   variant="outlined"
-                  InputLabelProps={{ shrink: true }}
+                  InputLabelProps={{
+                    shrink: true,
+                    style: { fontSize: "1.5rem" },
+                  }}
+                  InputProps={{
+                    style: { fontSize: "1.5rem" },
+                  }}
                   value={birthDate}
                   onChange={(e) => setBirthDate(e.target.value)}
                 />
