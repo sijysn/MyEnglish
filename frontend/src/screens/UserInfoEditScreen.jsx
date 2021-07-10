@@ -82,7 +82,7 @@ function UserInfoEditScreen() {
           maxHeight="100vh"
           style={{ overflowY: "scroll" }}
         >
-          <SettingsHeader url="/profile" title="ユーザー情報設定" />
+          <SettingsHeader url="/profile" title="ユーザー情報" />
 
           {loading || updating ? (
             <CircularProgress />
