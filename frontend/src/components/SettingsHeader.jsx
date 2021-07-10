@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-function SettingsHeader({ to, title }) {
+function SettingsHeader({ url, title, urlText = "戻る" }) {
   return (
     <Grid container alignItems="center">
       <Grid item xs={2}>
-        <Link to={to}>
+        <Link to={url}>
           <Typography component="h1" variant="h5" color="primary">
-            戻る
+            {urlText}
           </Typography>
         </Link>
       </Grid>

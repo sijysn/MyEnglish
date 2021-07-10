@@ -30,7 +30,7 @@ function ProfileSettingsScreen() {
           maxHeight="100vh"
           style={{ overflowY: "scroll" }}
         >
-          <SettingsHeader to="/" title="プロフィール設定" />
+          <SettingsHeader url="/" title="プロフィール設定" urlText="ホーム" />
 
           <Box mt="3rem">
             <List>

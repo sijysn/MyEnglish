@@ -64,7 +64,7 @@ function LoginInfoEditScreen() {
           maxHeight="100vh"
           style={{ overflowY: "scroll" }}
         >
-          <SettingsHeader to="/profile" title="ログイン情報設定" />
+          <SettingsHeader url="/profile" title="ログイン情報設定" />
 
           {loading ? (
             <CircularProgress />
