@@ -100,7 +100,7 @@ function QuizSettings({ setIsStarted, questionCount, setQuestionCount }) {
           <LinkButton
             to={`/editings/folders/${folder.id}/quizzes`}
             color="inherit"
-            name="戻る"
+            name="クイズ一覧"
             style={{
               margin: "2rem",
             }}
