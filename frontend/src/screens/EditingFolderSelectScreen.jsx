@@ -47,7 +47,7 @@ function EditingFolderSelectScreen() {
         style={{ overflowY: "scroll" }}
       >
         <Typography component="h1" variant="h3">
-          フォルダを選択
+          ファイルを選択
         </Typography>
 
         {loading ? (
@@ -84,7 +84,7 @@ function EditingFolderSelectScreen() {
                 <LinkButton
                   to="/editings/folders/create"
                   color="inherit"
-                  name="フォルダ作成"
+                  name="ファイル作成"
                   style={{
                     margin: "2rem",
                   }}

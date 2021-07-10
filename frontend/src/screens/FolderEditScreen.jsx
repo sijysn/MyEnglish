@@ -83,7 +83,7 @@ function FolderEditScreen() {
             <form onSubmit={updateFolderHandler} className="login__form">
               <TextField
                 required
-                label="フォルダ名"
+                label="ファイル名"
                 fullWidth
                 margin="normal"
                 autoFocus

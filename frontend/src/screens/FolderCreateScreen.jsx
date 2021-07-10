@@ -55,7 +55,7 @@ function FolderCreateScreen() {
         style={{ overflowY: "scroll" }}
       >
         <Typography component="h1" variant="h3">
-          フォルダ作成
+          ファイル作成
         </Typography>
 
         {loading ? (
@@ -64,7 +64,7 @@ function FolderCreateScreen() {
           <form onSubmit={createFolderHandler} className="login__form">
             <TextField
               required
-              label="フォルダ名"
+              label="ファイル名"
               fullWidth
               margin="normal"
               autoFocus

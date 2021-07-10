@@ -93,7 +93,7 @@ function FolderDeleteDialog({ name, folderId }) {
               削除されたデータは二度と戻りません。
               <br />
               <br />
-              {"  "}フォルダ名： {name}
+              {"  "}ファイル名： {name}
               <br />
               <br />
             </DialogContentText>

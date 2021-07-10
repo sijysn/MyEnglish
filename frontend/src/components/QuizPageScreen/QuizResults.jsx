@@ -88,7 +88,7 @@ function QuizResults({
           <LinkButton
             to={`/editings/folders`}
             color="inherit"
-            name="フォルダ選択"
+            name="ファイル選択"
             style={{
               margin: "2rem",
             }}
