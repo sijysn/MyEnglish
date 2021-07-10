@@ -103,7 +103,7 @@ function FolderDeleteDialog({ name, folderId }) {
               キャンセル
             </Button>
 
-            <Button onClick={deleteHandler} color="primary">
+            <Button onClick={deleteHandler} color="secondary">
               削除
             </Button>
           </DialogActions>

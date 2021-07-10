@@ -105,7 +105,7 @@ function QuizDeleteDialog({ word, meaning, quizId }) {
             <Button autoFocus onClick={closeDialog} color="primary">
               キャンセル
             </Button>
-            <Button onClick={deleteHandler} color="primary">
+            <Button onClick={deleteHandler} color="secondary">
               削除
             </Button>
           </DialogActions>{" "}
