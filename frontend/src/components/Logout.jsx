@@ -34,7 +34,9 @@ function Logout() {
         ログアウト
       </Typography>
       <Dialog open={isOpen} onClose={closeDialog}>
-        <DialogTitle>本当にログアウトしますか？</DialogTitle>
+        <DialogTitle style={{ color: "#f50057" }}>
+          本当にログアウトしますか？
+        </DialogTitle>
         <DialogContent>
           <DialogContentText>データは保存されます。</DialogContentText>
         </DialogContent>
@@ -42,7 +44,7 @@ function Logout() {
           <Button autoFocus onClick={closeDialog} color="primary">
             キャンセル
           </Button>
-          <Button onClick={logoutHandler} color="primary">
+          <Button onClick={logoutHandler} color="secondary">
             ログアウト
           </Button>
         </DialogActions>
