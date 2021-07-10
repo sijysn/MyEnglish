@@ -58,7 +58,7 @@ function RegisterScreen() {
           alt="Icon"
           className="login__icon"
         />
-        <Typography component="h1" variant="h2">
+        <Typography component="h1" variant="h3">
           ユーザー登録
         </Typography>
 

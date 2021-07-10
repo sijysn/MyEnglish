@@ -78,7 +78,7 @@ function QuizEditScreen() {
         maxHeight="100vh"
         style={{ overflowY: "scroll" }}
       >
-        <Typography component="h1" variant="h2">
+        <Typography component="h1" variant="h3">
           クイズ編集
         </Typography>
 

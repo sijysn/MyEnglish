@@ -59,7 +59,7 @@ function QuizCreateScreen() {
         maxHeight="100vh"
         style={{ overflowY: "scroll" }}
       >
-        <Typography component="h1" variant="h2">
+        <Typography component="h1" variant="h3">
           クイズ作成
         </Typography>
 
