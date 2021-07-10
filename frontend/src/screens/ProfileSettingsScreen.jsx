@@ -21,7 +21,7 @@ function ProfileSettingsScreen() {
   }, [history, userInfo]);
 
   return (
-    <Box>
+    <>
       <Container maxWidth="sm">
         <Box
           textAlign="center"
@@ -40,7 +40,7 @@ function ProfileSettingsScreen() {
           </Box>
         </Box>
       </Container>
-    </Box>
+    </>
   );
 }
 

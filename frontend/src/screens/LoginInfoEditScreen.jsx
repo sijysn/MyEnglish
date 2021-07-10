@@ -55,7 +55,7 @@ function LoginInfoEditScreen() {
   }, [password, confirmPassword]);
 
   return (
-    <Box>
+    <>
       <Container maxWidth="sm">
         <Box
           textAlign="center"
@@ -69,7 +69,7 @@ function LoginInfoEditScreen() {
           {loading ? (
             <CircularProgress />
           ) : (
-            <Box>
+            <>
               <form onSubmit={updateHandler} className="login__form">
                 <TextField
                   required
@@ -142,11 +142,11 @@ function LoginInfoEditScreen() {
                   変更
                 </Button>
               </form>
-            </Box>
+            </>
           )}
         </Box>
       </Container>
-    </Box>
+    </>
   );
 }
 

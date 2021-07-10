@@ -17,7 +17,7 @@ function QuestionCountSelector({
   quizList,
 }) {
   return (
-    <Box>
+    <>
       <Box
         display="flex"
         alignItems="center"
@@ -78,7 +78,7 @@ function QuestionCountSelector({
           }
         />
       </Box>
-    </Box>
+    </>
   );
 }
 

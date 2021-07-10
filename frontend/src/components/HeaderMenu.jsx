@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
@@ -16,7 +15,7 @@ function HeaderMenu() {
   const closeHandler = () => setAnchorEl("");
 
   return (
-    <Box>
+    <>
       <Button color="inherit" onClick={clickHandler}>
         <Typography component="span" variant="h5" color="inherit">
           メニュー
@@ -41,7 +40,7 @@ function HeaderMenu() {
           <Logout />
         </MenuItem>
       </Menu>
-    </Box>
+    </>
   );
 }
 

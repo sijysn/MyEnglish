@@ -73,7 +73,7 @@ function UserInfoEditScreen() {
   }, [dispatch, success, history, userProfile]);
 
   return (
-    <Box>
+    <>
       <Container maxWidth="sm">
         <Box
           textAlign="center"
@@ -89,7 +89,7 @@ function UserInfoEditScreen() {
           ) : error ? (
             <Alert severity="error">{error}</Alert>
           ) : (
-            <Box>
+            <>
               <form onSubmit={updateHandler} className="login__form">
                 <TextField
                   required
@@ -194,11 +194,11 @@ function UserInfoEditScreen() {
                   変更
                 </Button>
               </form>
-            </Box>
+            </>
           )}
         </Box>
       </Container>
-    </Box>
+    </>
   );
 }
 

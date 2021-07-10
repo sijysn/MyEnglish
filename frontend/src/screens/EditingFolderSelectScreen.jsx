@@ -56,41 +56,43 @@ function EditingFolderSelectScreen() {
           <Alert severity="error">{error}</Alert>
         ) : (
           folders && (
-            <List
-              style={{
-                maxHeight: "50vh",
-                width: "80%",
-                margin: "0 auto",
-                overflowY: "scroll",
-              }}
-            >
-              {folders.map((folder) => (
-                <EditingFolderListItem
-                  folderId={folder.id}
-                  name={folder.name}
-                  key={folder.id}
+            <>
+              <List
+                style={{
+                  maxHeight: "50vh",
+                  width: "80%",
+                  margin: "0 auto",
+                  overflowY: "scroll",
+                }}
+              >
+                {folders.map((folder) => (
+                  <EditingFolderListItem
+                    folderId={folder.id}
+                    name={folder.name}
+                    key={folder.id}
+                  />
+                ))}
+              </List>
+
+              <Box
+                display="flex"
+                flexDirection="row"
+                justifyContent="center"
+                alignItems="center"
+                mt={2}
+              >
+                <LinkButton
+                  to="/editings/folders/create"
+                  color="inherit"
+                  name="フォルダ作成"
+                  style={{
+                    margin: "2rem",
+                  }}
                 />
-              ))}
-            </List>
+              </Box>
+            </>
           )
         )}
-
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          alignItems="center"
-          mt={2}
-        >
-          <LinkButton
-            to="/editings/folders/create"
-            color="inherit"
-            name="フォルダ作成"
-            style={{
-              margin: "2rem",
-            }}
-          />
-        </Box>
       </Box>
     </Container>
   );

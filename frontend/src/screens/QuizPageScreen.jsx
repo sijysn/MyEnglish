@@ -43,7 +43,7 @@ function QuizPageScreen() {
   }, [history, userInfo, dispatch, id, isStarted]);
 
   return (
-    <Box>
+    <>
       {folderLoading && quizLoading ? (
         <Box textAlign="center" mt={2}>
           <CircularProgress />
@@ -55,7 +55,7 @@ function QuizPageScreen() {
       ) : (
         quizList &&
         folder && (
-          <Box>
+          <>
             {isStarted ? (
               isFinished ? (
                 <QuizResults
@@ -82,10 +82,10 @@ function QuizPageScreen() {
                 setQuestionCount={setQuestionCount}
               />
             )}
-          </Box>
+          </>
         )
       )}
-    </Box>
+    </>
   );
 }
 

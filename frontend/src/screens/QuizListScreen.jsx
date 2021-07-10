@@ -56,7 +56,7 @@ function QuizListScreen() {
         maxHeight="100vh"
         style={{ overflowY: "scroll" }}
       >
-        <Box>
+        <>
           <Typography component="h1" variant="h3" paragraph>
             クイズ一覧
           </Typography>
@@ -70,7 +70,7 @@ function QuizListScreen() {
           ) : (
             quizList &&
             folder && (
-              <Box>
+              <>
                 <Typography component="h1" variant="h4" paragraph>
                   {folder.name}
                 </Typography>
@@ -98,45 +98,45 @@ function QuizListScreen() {
                     />
                   ))}
                 </List>
-              </Box>
+
+                <Box
+                  display="flex"
+                  flexDirection="row"
+                  justifyContent="center"
+                  alignItems="center"
+                  mt={2}
+                >
+                  <LinkButton
+                    to={`/editings/folders/${folderId}/create`}
+                    color="inherit"
+                    name="クイズ作成"
+                    style={{
+                      margin: "2rem",
+                    }}
+                  />
+
+                  <LinkButton
+                    to={`/quizzes/folders/${folderId}`}
+                    color="inherit"
+                    name="クイズ開始"
+                    style={{
+                      margin: "2rem",
+                    }}
+                  />
+
+                  <LinkButton
+                    to={`/editings/folders`}
+                    color="inherit"
+                    name="フォルダ選択"
+                    style={{
+                      margin: "2rem",
+                    }}
+                  />
+                </Box>
+              </>
             )
           )}
-        </Box>
-
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          alignItems="center"
-          mt={2}
-        >
-          <LinkButton
-            to={`/editings/folders/${folderId}/create`}
-            color="inherit"
-            name="クイズ作成"
-            style={{
-              margin: "2rem",
-            }}
-          />
-
-          <LinkButton
-            to={`/quizzes/folders/${folderId}`}
-            color="inherit"
-            name="クイズ開始"
-            style={{
-              margin: "2rem",
-            }}
-          />
-
-          <LinkButton
-            to={`/editings/folders`}
-            color="inherit"
-            name="フォルダ選択"
-            style={{
-              margin: "2rem",
-            }}
-          />
-        </Box>
+        </>
       </Box>
     </Container>
   );
