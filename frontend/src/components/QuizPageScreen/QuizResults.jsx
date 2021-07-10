@@ -61,17 +61,18 @@ function QuizResults({
         mb="10vh"
         style={{ overflowY: "scroll" }}
       >
-        <Typography component="h1" variant="h2" paragraph>
+        <Typography component="h1" variant="h3" paragraph>
           クイズ結果
         </Typography>
 
-        <Typography component="h2" variant="h3" paragraph>
+        <Typography component="h2" variant="h4" paragraph>
           {folder.name}
         </Typography>
-
-        <Typography component="h2" variant="h3" paragraph>
-          {score} / {questionCount} 問正解！
-        </Typography>
+        <Box mt={5}>
+          <Typography component="h2" variant="h3" paragraph>
+            {score} / {questionCount} 問正解！
+          </Typography>
+        </Box>
 
         <Box mt={5}>
           <QuizResultList wrongQuizList={wrongQuizList} quizList={quizList} />
