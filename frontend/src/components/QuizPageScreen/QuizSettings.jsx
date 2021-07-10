@@ -88,28 +88,17 @@ function QuizSettings({ setIsStarted, questionCount, setQuestionCount }) {
           alignItems="center"
           mt={10}
         >
-          {error === "3つ以上のクイズを登録してください" ? (
-            <LinkButton
-              to={`/editings/folders/${folder.id}/quizzes/`}
-              color="inherit"
-              name="クイズ編集"
-              style={{
-                margin: "2rem",
-              }}
-            />
-          ) : (
-            <ActionButton
-              name="クイズ開始"
-              TypographyVariant="h5"
-              color="inherit"
-              disabled={error ? true : false}
-              onClick={startQuiz}
-              style={{ padding: "1rem 2rem", margin: "2rem", width: "14rem" }}
-            />
-          )}
+          <ActionButton
+            name="クイズ開始"
+            TypographyVariant="h5"
+            color="inherit"
+            disabled={error ? true : false}
+            onClick={startQuiz}
+            style={{ padding: "1rem 2rem", margin: "2rem", width: "14rem" }}
+          />
 
           <LinkButton
-            to={`/quizzes/folders`}
+            to={`/editings/folders/${folder.id}/quizzes`}
             color="inherit"
             name="戻る"
             style={{

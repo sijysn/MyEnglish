@@ -39,19 +39,19 @@ function HomeScreen() {
         </Box>
 
         <Box display="flex" justifyContent="center">
-          <LinkButton
+          {/* <LinkButton
             to={userInfo ? "/quizzes/folders" : "/login"}
             color="inherit"
             name="クイズ開始"
             style={{
               margin: "2rem",
             }}
-          />
+          /> */}
 
           <LinkButton
             to={userInfo ? "/editings/folders" : "/login"}
             color="inherit"
-            name="クイズ編集"
+            name="始める"
             style={{
               margin: "2rem",
             }}

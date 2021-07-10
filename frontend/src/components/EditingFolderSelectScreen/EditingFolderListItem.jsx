@@ -33,7 +33,7 @@ function EditingFolderListItem({ folderId, name }) {
       </Box>
 
       <ListItemIcon>
-        <Tooltip title="編集">
+        <Tooltip title="名前を編集">
           <Link to={`/editings/folders/${folderId}/edit`}>
             <IconButton>
               <EditIcon />

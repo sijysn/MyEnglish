@@ -87,7 +87,7 @@ function QuizResults({
           <LinkButton
             to={`/editings/folders`}
             color="inherit"
-            name="クイズ編集"
+            name="フォルダ選択"
             style={{
               margin: "2rem",
             }}
@@ -99,15 +99,6 @@ function QuizResults({
             color="inherit"
             onClick={retry}
             style={{ padding: "1rem 2rem", margin: "2rem", width: "14rem" }}
-          />
-
-          <LinkButton
-            to="/"
-            color="inherit"
-            name="トップ"
-            style={{
-              margin: "2rem",
-            }}
           />
         </Box>
       </Box>

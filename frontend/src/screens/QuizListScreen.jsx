@@ -57,7 +57,7 @@ function QuizListScreen() {
         style={{ overflowY: "scroll" }}
       >
         <Box>
-          <Typography component="h1" variant="h4" paragraph>
+          <Typography component="h1" variant="h3" paragraph>
             クイズ一覧
           </Typography>
 
@@ -120,9 +120,18 @@ function QuizListScreen() {
           />
 
           <LinkButton
+            to={`/quizzes/folders/${folderId}`}
+            color="inherit"
+            name="クイズ開始"
+            style={{
+              margin: "2rem",
+            }}
+          />
+
+          <LinkButton
             to={`/editings/folders`}
             color="inherit"
-            name="戻る"
+            name="フォルダ選択"
             style={{
               margin: "2rem",
             }}

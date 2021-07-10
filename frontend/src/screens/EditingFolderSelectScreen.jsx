@@ -46,8 +46,8 @@ function EditingFolderSelectScreen() {
         maxHeight="100vh"
         style={{ overflowY: "scroll" }}
       >
-        <Typography component="h1" variant="h4">
-          編集するフォルダーを選択
+        <Typography component="h1" variant="h3">
+          フォルダを選択
         </Typography>
 
         {loading ? (
@@ -86,15 +86,6 @@ function EditingFolderSelectScreen() {
             to="/editings/folders/create"
             color="inherit"
             name="フォルダ作成"
-            style={{
-              margin: "2rem",
-            }}
-          />
-
-          <LinkButton
-            to="/"
-            color="inherit"
-            name="戻る"
             style={{
               margin: "2rem",
             }}

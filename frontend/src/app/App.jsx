@@ -11,7 +11,6 @@ import RegisterScreen from "../screens/RegisterScreen";
 import ProfileSettingsScreen from "../screens/ProfileSettingsScreen";
 import LoginInfoEditScreen from "../screens/LoginInfoEditScreen";
 import UserInfoEditScreen from "../screens/UserInfoEditScreen";
-import QuizFolderSelectScreen from "../screens/QuizFolderSelectScreen";
 import QuizPageScreen from "../screens/QuizPageScreen";
 import EditingFolderSelectScreen from "../screens/EditingFolderSelectScreen";
 import FolderEditScreen from "../screens/FolderEditScreen";
@@ -56,12 +55,6 @@ function App() {
         />
 
         <Route exact path="/profile/userinfo" component={UserInfoEditScreen} />
-
-        <Route
-          exact
-          path="/quizzes/folders"
-          component={QuizFolderSelectScreen}
-        />
 
         <Route exact path="/quizzes/folders/:id" component={QuizPageScreen} />
 
